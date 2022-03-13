@@ -34,15 +34,38 @@ global n = something;
 global var n2 = somethingelse;
 ```
 
+## If
+
+```
+if expression {
+	
+}
+```
+Will run if `expression` evaluates to `true`.
+Can be combined with `else` like so:
+
+```
+if expression {
+	// do something
+	
+} else if another_expression {
+	// do something else
+	
+} else {
+    // do a something different
+}
+```
+
 ## Loops
 
-### for
+### For
 
 ```
 for i in something {
     
 }
 ```
+
 The for loop is very versatile, as it can be used to iterate over an array but also over numbers, strings and the keys of objects.
 
 ```
@@ -63,6 +86,32 @@ for i in my_object {
 }
 ```
 
+### While
+
+```
+while something {
+	
+}
+```
+
+Will repeat until the expression `something` evaluates to `false`
+
+```
+var a = false;
+while !a {
+    a = true;
+}
+```
+
+
+You cannot write `for`, `if` or `while` statements in the common C-like way:
+```
+// InvalidSyntaxError
+if (expression) 
+	do_something();
+```
+You must have curly braces.
+
 ## Comments
 
 Like JavaScript, you write comments as follows
@@ -74,3 +123,59 @@ Like JavaScript, you write comments as follows
  */
 ```
 
+
+## Functions
+
+All functions are anonymous and they use the `func` keyword.
+
+```
+// incorrect - InvalidSyntaxError
+func do_something () {};
+
+// correct
+let do_something = func () {};
+```
+
+## Classes
+
+Like functions, all classes are anonymous, and they use the `class` keyword.
+
+```
+// incorrect - InvalidSyntaxError
+class MyClass {};
+
+// correct
+let MyClass = class {};
+```
+
+### Methods
+The body of the class can only contain methods, which are declared like so:
+```
+let MyClass = class {
+    // method
+    do_something () {
+        // do something
+    }
+};
+```
+All methods and properties are public.
+
+### Constructor
+The constructor gets called once when the instance is created.
+```
+let MyClass = class {
+    // constructor 
+    init () {
+        this.a = 1;
+    }
+    
+    // method
+    get_a () {
+        return this.a;
+    }
+};
+
+let my_instance = MyClass();
+my_instance.get_a(); // 1
+```
+Simply call the class like a function to create an instance. No `new` keyword.
