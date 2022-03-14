@@ -56,12 +56,18 @@ if expression {
 }
 ```
 
+You can also use `if`s similarly to ternary operators, such as:
+```
+let my_val = if true { 'hello' } else { 'bye' };
+my_val; // 'hello'
+```
+
 ## Loops
 
 ### For
 
 ```
-for i in something {
+for i in expression {
     
 }
 ```
@@ -70,26 +76,26 @@ The for loop is very versatile, as it can be used to iterate over an array but a
 
 ```
 // iterate from 0-9
-for i in 10 {
+for j in 10 {
 	
 }
 
 // iterate from 3-9 with a step of 2
-for i in range(3, 9, 2) {
+for l in range(3, 9, 2) {
 	
 }
 
 let my_object = { a: 1, b: 2 };
 // iterate over the array ['a', 'b']
-for i in my_object {
-	
+for key in my_object {
+	let value = my_object[key];
 }
 ```
 
 ### While
 
 ```
-while something {
+while expression {
 	
 }
 ```

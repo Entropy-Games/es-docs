@@ -3,4 +3,4 @@ authors = ["Joseph Coppin"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Entropy Script Docs"
+title = "EntropyScript Docs"
