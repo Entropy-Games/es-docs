@@ -5,6 +5,7 @@
 - [Setup](./setup.md)
 - [CLI](./cli.md)
 - [Syntax](./syntax/index.md)
+  - [Operators](./syntax/operators.md)
 - [Primitives](./primitives/index.md)
   - [Type](./primitives/type.md)
   - [Number](./primitives/number.md)
