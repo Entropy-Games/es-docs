@@ -7,9 +7,14 @@ All lines must have semicolons except the last line in a statements.
 
 ## Declaration
 
-To declare a mutable variable, simply say 
+To declare a constant, say
 ```
-var n = something;
+let n = something;
+```
+
+To declare a mutable variable, say 
+```
+let var n = something;
 ```
 
 You must declare variables before using them.
@@ -18,20 +23,13 @@ This would result in an InvalidSyntaxError:
 n = something;
 ```
 
-To declare a constant, say
-```
-let n = something;
-```
-
-You should default to declaring constants.
-
 You can also declare global variables like this:
 ```
 // global constant
-global n = something;
+let global n = something;
 
 // global mutable variable
-global var n2 = somethingelse;
+let global var n2 = somethingelse;
 ```
 
 ## If
@@ -132,27 +130,30 @@ Like JavaScript, you write comments as follows
 
 ## Functions
 
-All functions are anonymous and they use the `func` keyword.
+You can declare functions like so
 
 ```
-// incorrect - InvalidSyntaxError
-func do_something () {};
+func do_something () {
 
-// correct
+};
+// Note the ';'
+
+```
+Or anonymously like this
+```
 let do_something = func () {};
 ```
 
 ## Classes
 
-Like functions, all classes are anonymous, and they use the `class` keyword.
-
+Declare classes like so
 ```
-// incorrect - InvalidSyntaxError
 class MyClass {};
-
-// correct
-let MyClass = class {};
+// or
+let MyOtherClass = class {};
 ```
+
+All classes and types should be in `PascalCase`
 
 ### Methods
 The body of the class can only contain methods, which are declared like so:
@@ -169,7 +170,7 @@ All methods and properties are public.
 ### Constructor
 The constructor gets called once when the instance is created.
 ```
-let MyClass = class {
+class MyClass {
     // constructor 
     init () {
         this.a = 1;
@@ -185,3 +186,41 @@ let my_instance = MyClass();
 my_instance.get_a(); // 1
 ```
 Simply call the class like a function to create an instance. No `new` keyword.
+
+### Operator overrides
+```
+class Num {
+    init (n: Number) {
+        this.a = n;
+    }
+    
+    __add__ (to: Number) {
+    
+    }
+};
+
+Num(1) + Num(2);
+// Num(3);
+```
+
+The overrideable methods are:
+
+| Method Name        | Operator                           |
+|--------------------|------------------------------------|
+| `__add__`          | `+`                                |
+| `__subtract__`     | `-`                                |
+| `__multiply__`     | `*`                                |
+| `__divide__`       | `/`                                |
+| `__pow__`          | `^`                                |
+| `__eq__`           | `==`                               |
+| `__gt__`           | `>`                                |
+| `__lt__`           | `<`                                |
+| `__or__`           | <code>&#124;&#124;</code>          |
+| `__and__`          | `&&`                               |
+| `__pipe__`         | <code>&#124;</code>                |
+| `__ampersand__`    | `&`                                |
+| `__bool__`         | `!!` and any other bool conversion |
+| `__set_property__` | `[]` and `.`                       |
+| `__get_property__` | `[]` and `.`                       |
+| `__call__`         | ()                                 |
+          
