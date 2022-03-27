@@ -1,5 +1,7 @@
 # Built In Modules
 
+\* node CLI only
+
 ## json
 
 ## ascii
@@ -10,12 +12,15 @@
 
 ## promise
 
-## fs
 
-## https
+# All the following modules act exactly like their node.js counterparts
 
-## http
+## fs *
 
-## mysql
+## https *
 
-## path
+## http *
+
+## mysql *
+
+## path *

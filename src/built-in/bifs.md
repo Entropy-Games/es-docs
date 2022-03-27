@@ -30,13 +30,13 @@ Returns a string with information on the passed object.
 
 ## print
 ```
-print: func (*: Array[Any]) nil;
+print: func (*) nil;
 ```
 Calls the specified print function. Often just native `console.log`.
 
 ## log
 ```
-log: func (*: Array[Any]) nil;
+log: func (*) nil;
 ```
 Calls native `console.log`
 
@@ -68,14 +68,16 @@ Adds all symbols from object or namespace to the current scope.
 
 ## throw
 ```
-throw: func (name: String, detail: String) nil;
+throw: func (name: String | Error, detail: ?String) nil;
 ```
-Throws an error of type `name`.
+Throws an error of type `name`, or the error if an instance of an error is passed as the fist argument
 
 ## sleep
 ```
 sleep: func (ms: Number, then: func (*: Array[Any]) Any) nil;
 ```
+
+Waits `ms` milliseconds and then excecutes the callback
 
 ## open *
 ```
@@ -87,3 +89,4 @@ open: func (path: String, encoding: ?String = 'utf-8') ({
 ```
 
 Throws `ImportError` if the file doesn't exist.
+

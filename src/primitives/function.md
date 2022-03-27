@@ -42,3 +42,45 @@ let my_func: (func () Number) = func () 0;
 // ok
 let my_func: (func () Number) = func (): Number 0;
 ```
+
+Allow any number of arguments with the `*` argument.
+Access the arguments with the `args` variable automatically made in the functions scope.
+```
+func fn (*) {
+    return args;
+};
+```
+Will return an array of the arguments passed in
+
+# Kwargs
+
+Similarly to python, functions can also take key-word arguments.
+Kwargs are specified with the `*` operator before the name.
+```
+func fn (*a) {
+    return a;
+};
+```
+Pass kwargs again with `*`
+```
+func fn (a, *b) {
+    return [a, b];
+};
+
+fn(1, *a=2); // [1, 2]
+```
+
+Allow any number of kwargs with the `**` argument, which must be the last argument.
+Access the kwargs with the `kwargs` variable automatically made in the functions scope.
+```
+func fn (**) {
+    return kwargs;
+};
+```
+
+returns an object with all the kwargs passed through in.
+
+```
+func fn (*, **) {};
+```
+This function takes any number of arguments or kwargs.

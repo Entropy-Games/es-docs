@@ -16,6 +16,17 @@ Type(Type(Type));    // 'String'
 Type();              // new type
 ```
 
+## Methods
+
+
+
+## Properties
+`__primordial__: Bool` is the type primordial (predefined) or user defined.
+`__name__: String` the name of the type
+`__extends__: ?Type` the parent type
+`__methods__: Array[Func]` an array of the methods the type will add to instance
+`__init__: ?Func` the constructor function called when a type is instantiated
+
 # TypeUnion
 
 Is the 'Union' of two types.

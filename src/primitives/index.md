@@ -82,11 +82,12 @@ Returns a clone of the object
 ### __type__
 The object's type.
 
-### self
+### _
 The object
-
-### info
-The metadata about the object, including its description
 
 ### __value__
-The object
+The object, same as `_` and just not putting it.
+
+### __info__
+The metadata about the object, including its description
+

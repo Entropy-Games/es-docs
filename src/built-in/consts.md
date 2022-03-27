@@ -5,6 +5,10 @@
 ## false
 
 ## nil
+Instance of undefined. Use `something == nil` to check if `something` is undefined
+
+## inf
+Infinity. `-inf` for negative infinity.
 
 ## Type
 
@@ -17,6 +21,7 @@
 ## Array
 
 ## Any
+Matches all types.
 
 ## Bool
 
@@ -25,3 +30,4 @@
 ## Error
 
 ## Undefined
+Type of `nil`
