@@ -4,9 +4,22 @@
 
 ## json
 
+Same as JS JSON global object.
+
 ## ascii
 
+```
+// converts number representing ascii character to a string
+ascii.asciiToChar: func (n: Num) Str;
+
+// other way round
+ascii.charToAscii: func (n: Str): Num; 
+```
+
 ## time
+```
+time.now: func () Num;
+```
 
 ## math
 
