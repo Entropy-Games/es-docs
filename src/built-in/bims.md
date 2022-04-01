@@ -3,8 +3,9 @@
 \* node CLI only
 
 ## json
-
-Same as JS JSON global object.
+```
+json: <native JSON>;
+```
 
 ## ascii
 
@@ -19,12 +20,18 @@ ascii.charToAscii: func (n: Str): Num;
 ## time
 ```
 time.now: func () Num;
+time.date: <native Date>;
 ```
 
 ## math
+```
+math: <native Math>;
+```
 
 ## promise
-
+```
+promise: <native Promise>
+```
 
 # All the following modules act exactly like their node.js counterparts
 
