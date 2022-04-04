@@ -4,6 +4,8 @@
 Arr: Type;
 ```
 
+Is iterable.
+
 Arrays can be declared with square brackets, elements delimited by a comma.
 
 For example, an array of numbers:
@@ -39,6 +41,10 @@ let my_tuple: tuple = ['hello', 0];
 let my_bad_tuple: tuple = ['hello', 'world'];
 
 ```
+
+Concatenate arrays using the `+` operator.
+
+Arrays can be `cast` to `Str`, `Num` (number of elements), or `Bool` (num of elements > 0).
 
 ## Methods
 

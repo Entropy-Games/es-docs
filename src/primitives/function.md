@@ -50,7 +50,7 @@ func fn (*) {
     return args;
 };
 ```
-Will return an array of the arguments passed in
+Will return an array of all the arguments passed in
 
 # Kwargs
 
@@ -84,3 +84,9 @@ returns an object with all the kwargs passed through in.
 func fn (*, **) {};
 ```
 This function takes any number of arguments or kwargs.
+
+Note that the order of parameters is:
+* Positional (normal)
+* Kwargs
+* \*
+* \*\*

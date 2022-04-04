@@ -1,7 +1,9 @@
 # String
 ```
-String: Type
+Str: Type
 ```
+
+Is iterable.
 
 Create a string with `'`, `` ` `` or `"`.
 All are equivalent.
@@ -19,6 +21,8 @@ To escape the string, use `\` backslash; for example
 ```
 'Here\'s a string';
 ```
+
+Concatenate strings using the `+` operator.
 
 ## Methods
 

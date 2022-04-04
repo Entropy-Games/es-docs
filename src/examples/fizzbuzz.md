@@ -1,7 +1,7 @@
 # FizzBuzz to n
 
 ```
-let now = import('time').now;
+let [ now ] = import('time');
 
 func main (n) {
     for i in range(1, n+1) {

@@ -1,8 +1,10 @@
 # Number
 
 ```
-Number: Type;
+Num: Type;
 ```
+
+Is iterable.
 
 Number is for both integers and floating point numbers.
 

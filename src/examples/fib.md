@@ -1,9 +1,9 @@
 # Fibonacci series up to n
 
 ```
-let fib = func (n) {
-    var a = 0;
-    var b = 1;
+func fib (n) {
+    let var a = 0;
+    let var b = 1;
 
     while a < n {
         print(a);

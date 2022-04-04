@@ -3,6 +3,15 @@
 Err: Type;
 ```
 
+
+Throw an error with the `throw` build in function. 
+Create an error by calling an error constructor, such as `TypeError`:
+```
+// expected string, but got bool
+let my_err = TypeError('Str', 'Bool');
+throw(my_err);
+```
+
 ## Methods
 
 (None)
