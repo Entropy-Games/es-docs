@@ -47,13 +47,13 @@ delete: func (symbol: String) nil;
 ```
 Removes a symbol with the specified identifier.
 
-## __path__
+## \_\_path__
 ```
 __path__: func () String;
 ```
 Returns The current path
 
-## __symbols__
+## \_\_symbols__
 ```
 __symbols__: func (recursive: ?Bool) Object;
 ```

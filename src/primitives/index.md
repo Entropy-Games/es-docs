@@ -79,15 +79,17 @@ Returns a clone of the object
 
 ## Properties
 
-### __type__
+### \_\_type__
 The object's type.
 
 ### _
 The object
 
-### __value__
+### \_\_value__
 The object, same as `_` and just not putting it.
 
-### __info__
+### \_\_info__
 The metadata about the object, including its description
 
+### \_\_iterable__
+A bool of whether it can be iterated over.
