@@ -5,6 +5,8 @@
 - [Setup](./setup.md)
 - [CLI](./cli.md)
 - [Syntax](./syntax/index.md)
+  - [Keywords](./syntax/keywords.md)
+  - [Enhancements](./syntax/enhancements.md)
 - [Built In](./built-in/index.md)
     - [Global Constants](./built-in/consts.md)
     - [Built-In Functions](./built-in/bifs.md)
