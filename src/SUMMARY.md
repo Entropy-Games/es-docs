@@ -28,3 +28,4 @@
 - [Examples](./examples/index.md)
     - [FizzBuzz](./examples/fizzbuzz.md)
     - [Fibonacci](./examples/fib.md)
+- [Changelog](./changelog/changelog.md)
