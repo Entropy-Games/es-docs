@@ -127,100 +127,13 @@ Like JavaScript, you write comments as follows
  */
 ```
 
-
-## Functions
-
-You can declare functions like so
-
+## Try-Catch
 ```
-func do_something () {
-
-};
-// Note the ';'
-
+try {
+    throw(TypeError());
+} catch {
+    // 'err' variable created in this scope
+    print(err);
+    err.name; // 'TypeError'
+}
 ```
-Or anonymously like this
-```
-let do_something = func () {};
-```
-
-## Classes
-
-Declare classes like so
-```
-class MyClass {};
-// or
-let MyOtherClass = class {};
-```
-
-All classes and types should be in `PascalCase`
-
-### Methods
-The body of the class can only contain methods, which are declared like so:
-```
-let MyClass = class {
-    // method
-    do_something () {
-        // do something
-    }
-};
-```
-All methods and properties are public.
-
-### Constructor
-The constructor gets called once when the instance is created.
-```
-class MyClass {
-    // constructor 
-    init () {
-        this.a = 1;
-    }
-    
-    // method
-    get_a () {
-        return this.a;
-    }
-};
-
-let my_instance = MyClass();
-my_instance.get_a(); // 1
-```
-Simply call the class like a function to create an instance. No `new` keyword.
-
-### Operator overrides
-```
-class Num {
-    init (n: Number) {
-        this.a = n;
-    }
-    
-    __add__ (to: Number) {
-    
-    }
-};
-
-Num(1) + Num(2);
-// Num(3);
-```
-
-The overrideable methods are:
-
-| Method Name        | Operator                           |
-|--------------------|------------------------------------|
-| `__add__`          | `+`                                |
-| `__subtract__`     | `-`                                |
-| `__multiply__`     | `*`                                |
-| `__divide__`       | `/`                                |
-| `__pow__`          | `^`                                |
-| `__eq__`           | `==`                               |
-| `__gt__`           | `>`                                |
-| `__lt__`           | `<`                                |
-| `__or__`           | <code>&#124;&#124;</code>          |
-| `__and__`          | `&&`                               |
-| `__pipe__`         | <code>&#124;</code>                |
-| `__ampersand__`    | `&`                                |
-| `__bool__`         | `!!` and any other bool conversion |
-| `__set_property__` | `[]` and `.`                       |
-| `__get_property__` | `[]` and `.`                       |
-| `__call__`         | ()                                 |
-          

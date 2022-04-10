@@ -10,24 +10,36 @@ Instance of undefined. Use `something == nil` to check if `something` is undefin
 ## inf
 Infinity. `-inf` for negative infinity.
 
+# Global Types
+
 ## Type
+The type of all types, including this one.
+```
+Type.
+```
+## Str
+Strings. Create a string with quotes or backticks.
 
-## String
-
-## Number
+## Num
+Numbers
 
 ## Func
+Functions
 
-## Array
+## Arr
+Arrays
 
 ## Any
 Matches all types.
 
 ## Bool
+Booleans
 
-## Object
+## Obj
+Object literals, namespaces, modules, class instances and JS bindings
 
-## Error
+## Err
+Errors
 
-## Undefined
+## Null
 Type of `nil`

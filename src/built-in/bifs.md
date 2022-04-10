@@ -47,13 +47,13 @@ delete: func (symbol: String) nil;
 ```
 Removes a symbol with the specified identifier.
 
-## __path__
+## \_\_path__
 ```
 __path__: func () String;
 ```
 Returns The current path
 
-## __symbols__
+## \_\_symbols__
 ```
 __symbols__: func (recursive: ?Bool) Object;
 ```
@@ -77,16 +77,22 @@ Throws an error of type `name`, or the error if an instance of an error is passe
 sleep: func (ms: Number, then: func (*: Array[Any]) Any) nil;
 ```
 
-Waits `ms` milliseconds and then excecutes the callback
+Waits `ms` milliseconds and then executes the callback
 
 ## open *
 ```
 open: func (path: String, encoding: ?String = 'utf-8') ({
-    str: func () String,
-    write: func (data: String) nil,
-    append: func (data: String) nil
+    str: func () Str,
+    write: func (data: Str) nil,
+    append: func (data: Str) nil
 })};
 ```
 
 Throws `ImportError` if the file doesn't exist.
 
+## interface
+```
+interface: func (value: Obj) Obj;
+```
+Returns the same object but without exact type checking.
+It uses duck typing instead of the normal strict typing.

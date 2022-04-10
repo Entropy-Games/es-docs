@@ -1,9 +1,9 @@
 # FizzBuzz to n
 
 ```
-let now = import('time').now;
+let [ now ] = import('time');
 
-const main = func (n) {
+func main (n) {
     for i in range(1, n+1) {
 
         div3 = i % 3 == 0;
